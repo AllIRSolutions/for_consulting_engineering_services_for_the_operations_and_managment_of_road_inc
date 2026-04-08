@@ -1,0 +1,233 @@
+{
+  "buildId": "build-et-151625-mnpnhf02n4qd",
+  "tenderId": "et-151625",
+  "tenderRef": "X.002-214-2024-1F",
+  "name": "FOR_CONSULTING_ENGINEERING_SERVICES_FOR_THE_OPERATIONS_AND_MANAGMENT_OF_ROAD_INC",
+  "architecture": {
+    "name": "road-incident-management-system",
+    "description": "Comprehensive road incident management system for monitoring, detecting, and responding to traffic incidents on Mpumalanga Province roads with integrated safety audit capabilities",
+    "stack": {
+      "backend": "Node.js/Express",
+      "frontend": "React + TailwindCSS",
+      "database": "PostgreSQL with PostGIS for geospatial data",
+      "ai": "Claude API integration for incident analysis and safety recommendations",
+      "realtime": "WebSocket for live incident updates",
+      "mapping": "MapBox GL JS for road network visualization",
+      "mobile": "React Native for field inspector app"
+    },
+    "modules": [
+      {
+        "name": "incident-detection",
+        "purpose": "Real-time monitoring and automatic incident detection using traffic cameras, sensors, and citizen reports",
+        "files": [
+          "src/detection/sensors.js",
+          "src/detection/camera-analysis.js",
+          "src/detection/pattern-recognition.js"
+        ]
+      },
+      {
+        "name": "incident-management",
+        "purpose": "Complete incident lifecycle management from creation to resolution",
+        "files": [
+          "src/incident/crud.js",
+          "src/incident/workflow.js",
+          "src/incident/priority-calculator.js"
+        ]
+      },
+      {
+        "name": "response-coordination",
+        "purpose": "Emergency response coordination with dispatch, resource allocation, and communication",
+        "files": [
+          "src/response/dispatch.js",
+          "src/response/resources.js",
+          "src/response/communication.js"
+        ]
+      },
+      {
+        "name": "safety-audit",
+        "purpose": "Road safety audit management with inspection scheduling, reporting, and compliance tracking",
+        "files": [
+          "src/audit/scheduler.js",
+          "src/audit/checklist.js",
+          "src/audit/reporting.js"
+        ]
+      },
+      {
+        "name": "geospatial-mapping",
+        "purpose": "Interactive road network mapping with incident overlay and route optimization",
+        "files": [
+          "src/mapping/road-network.js",
+          "src/mapping/incident-overlay.js",
+          "src/mapping/routing.js"
+        ]
+      },
+      {
+        "name": "analytics-dashboard",
+        "purpose": "Real-time monitoring dashboard with KPIs, trends analysis, and reporting",
+        "files": [
+          "src/analytics/dashboard.js",
+          "src/analytics/kpi-calculator.js",
+          "src/analytics/trend-analysis.js"
+        ]
+      },
+      {
+        "name": "notification-system",
+        "purpose": "Multi-channel alert system for stakeholders including SMS, email, and push notifications",
+        "files": [
+          "src/notifications/alerts.js",
+          "src/notifications/channels.js",
+          "src/notifications/templates.js"
+        ]
+      },
+      {
+        "name": "mobile-field-app",
+        "purpose": "Mobile application for field inspectors and response teams",
+        "files": [
+          "mobile/src/inspector-app.js",
+          "mobile/src/offline-sync.js",
+          "mobile/src/photo-upload.js"
+        ]
+      },
+      {
+        "name": "reporting-engine",
+        "purpose": "Automated report generation for compliance, performance metrics, and audit trails",
+        "files": [
+          "src/reports/generator.js",
+          "src/reports/templates.js",
+          "src/reports/scheduler.js"
+        ]
+      },
+      {
+        "name": "integration-hub",
+        "purpose": "External system integrations with traffic management systems, emergency services, and government databases",
+        "files": [
+          "src/integrations/traffic-systems.js",
+          "src/integrations/emergency-services.js",
+          "src/integrations/gov-apis.js"
+        ]
+      }
+    ],
+    "apiEndpoints": [
+      {
+        "method": "POST",
+        "path": "/api/incidents",
+        "description": "Create new incident report"
+      },
+      {
+        "method": "GET",
+        "path": "/api/incidents",
+        "description": "Get incidents with filtering and pagination"
+      },
+      {
+        "method": "PUT",
+        "path": "/api/incidents/:id/status",
+        "description": "Update incident status and response actions"
+      },
+      {
+        "method": "POST",
+        "path": "/api/incidents/:id/response",
+        "description": "Dispatch emergency response team"
+      },
+      {
+        "method": "GET",
+        "path": "/api/road-network/mpumalanga",
+        "description": "Get provincial road network data with current conditions"
+      },
+      {
+        "method": "POST",
+        "path": "/api/safety-audits",
+        "description": "Schedule new road safety audit"
+      },
+      {
+        "method": "GET",
+        "path": "/api/safety-audits/:id/checklist",
+        "description": "Get safety audit checklist and inspection points"
+      },
+      {
+        "method": "POST",
+        "path": "/api/safety-audits/:id/findings",
+        "description": "Submit safety audit findings and recommendations"
+      },
+      {
+        "method": "GET",
+        "path": "/api/analytics/dashboard",
+        "description": "Get real-time dashboard metrics and KPIs"
+      },
+      {
+        "method": "GET",
+        "path": "/api/analytics/trends",
+        "description": "Get incident trends and pattern analysis"
+      },
+      {
+        "method": "POST",
+        "path": "/api/alerts/broadcast",
+        "description": "Send emergency broadcast alerts to stakeholders"
+      },
+      {
+        "method": "GET",
+        "path": "/api/reports/compliance",
+        "description": "Generate compliance reports for regulatory requirements"
+      },
+      {
+        "method": "POST",
+        "path": "/api/mobile/sync",
+        "description": "Synchronize mobile field data with central system"
+      },
+      {
+        "method": "GET",
+        "path": "/api/integrations/traffic-data",
+        "description": "Get real-time traffic data from external systems"
+      }
+    ],
+    "features": [
+      "Real-time incident detection and monitoring",
+      "Automated emergency response dispatch",
+      "Interactive road network mapping",
+      "Mobile field inspection application",
+      "Comprehensive safety audit management",
+      "Multi-channel notification system",
+      "Advanced analytics and reporting",
+      "Integration with external traffic systems",
+      "Compliance tracking and documentation",
+      "Historical incident analysis",
+      "Resource allocation optimization",
+      "Citizen incident reporting portal",
+      "Weather and traffic condition monitoring",
+      "Automated report generation",
+      "Role-based access control",
+      "Offline capability for field operations"
+    ],
+    "aiChatbot": {
+      "purpose": "Intelligent assistant for incident analysis, safety recommendations, and operational support for traffic management personnel",
+      "capabilities": [
+        "Analyze incident patterns and suggest preventive measures",
+        "Provide real-time safety audit guidance and checklists",
+        "Recommend optimal emergency response strategies",
+        "Generate incident severity assessments",
+        "Offer road safety improvement suggestions",
+        "Assist with compliance requirement interpretation",
+        "Provide historical data insights and trend analysis",
+        "Support decision-making with data-driven recommendations",
+        "Help with resource allocation optimization",
+        "Offer training guidance for response procedures"
+      ]
+    }
+  },
+  "files": [
+    "package.json",
+    "src/server.js",
+    "public/index.html",
+    "src/chatbot.js",
+    "src/database.js"
+  ],
+  "similarProjects": [
+    "Mario-Kart-Felix/solar-wind-hacker-book",
+    "devanshibirla20/Security-Monitoring-Incident-Response",
+    "Hemanth2608-co/Incident-Monitoring-Alert-System-Python-FastAPI",
+    "jssutachan/telecom-monitoring-platform",
+    "bhanuprakash1708/Emergency-Management-System"
+  ],
+  "builtAt": "2026-04-08T06:13:31.367Z",
+  "status": "complete",
+  "buildDir": "/home/kabelo/tender-engine/data/builds/build-et-151625-mnpnhf02n4qd"
+}

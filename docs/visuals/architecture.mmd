@@ -1,0 +1,44 @@
+graph TB
+    subgraph "Frontend"
+        UI[Web Interface]
+        Chat[AI Chatbot Widget]
+    end
+    
+    subgraph "road-incident-management-system Backend"
+        API[REST API Server]
+        Auth[Authentication]
+        BL[Business Logic]
+    M0[incident-detection]
+    M1[incident-management]
+    M2[response-coordination]
+    M3[safety-audit]
+    M4[geospatial-mapping]
+    M5[analytics-dashboard]
+    M6[notification-system]
+    M7[mobile-field-app]
+    M8[reporting-engine]
+    M9[integration-hub]
+    end
+    
+    subgraph "Data Layer"
+        DB[(Database)]
+        Files[File Storage]
+    end
+    
+    subgraph "External Services"
+        Claude[Claude AI API]
+    end
+    
+    UI --> API
+    Chat --> API
+    API --> Auth
+    API --> BL
+    BL --> DB
+    BL --> Files
+    API --> Claude
+    
+    style UI fill:#4CAF50,color:#fff
+    style Chat fill:#2196F3,color:#fff
+    style API fill:#FF9800,color:#fff
+    style DB fill:#9C27B0,color:#fff
+    style Claude fill:#E91E63,color:#fff
